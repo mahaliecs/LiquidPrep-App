@@ -20,9 +20,9 @@ export class LanguageTranslatorService {
     // const translator = new LanguageTranslatorV3({
     //     version: '2018-05-01',
     //     // authenticator: new IamAuthenticator({
-    //     //   apikey: 'ZghpOfAbpgdLuoAgV7-kOEYlG6CJSTem-wSHo9NrWues',
+    //     //   apikey: '',
     //     // }),
-    //     // url: 'https://api.us-south.language-translator.watson.cloud.ibm.com/instances/b0491abd-7640-4d72-98e6-a68035a39968',
+    //     // url: '',
     //   });
 
     const translateParams:TranslateParams = {
