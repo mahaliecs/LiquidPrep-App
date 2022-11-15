@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import { WaterAdviceService } from 'src/app/service/WaterAdviceService';
 import {Crop} from '../../models/Crop';
 import {CropDataService} from '../../service/CropDataService';
+import {LanguageTranslatorService} from '../../service/LanguageTranslatorService';
 
 @Component({
   selector: 'app-advice',
@@ -25,6 +26,13 @@ export class AdviceComponent implements OnInit {
   rainfallPercentage: number = undefined;
   rainfallIndex: string = undefined;
   weatherIcon: string = null;
+
+  wateringDecisionLabel = "WATERING ADVICE";
+  stageNumberLabel = "GROWTH STAGE";
+  soilMoistureLevelLabel = "SOIL MOISTURE";
+  plantingDaysLabel = "SINCE PLANTING";
+  temperatureLabel = "TEMPERATURE";
+  rainfallPercentageLabel = "RAINFALL";
 
   adviceImg = undefined; // this.ADVICE_IMAGES[0];
 
@@ -60,6 +68,9 @@ export class AdviceComponent implements OnInit {
       this.weatherIcon = advice.weatherIconTemp;
       this.adviceImg = advice.imageUrl;
     });
+    const translator = new LanguageTranslatorService();
+    console.log("TEST")
+	  // console.log(translator.Translate(["Hello"], "en-es"))
   }
 
   public volumeClicked() {

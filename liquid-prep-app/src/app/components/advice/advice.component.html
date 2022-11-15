@@ -20,25 +20,25 @@
   <mat-grid-tile>
     <div class="vertical">
       <span class="vertical-align-middle txt-font water-des-color">{{wateringDecision}}</span>
-      <Label class="description" textWrap="true">{{ "WATERING ADVICE" }}</Label>
+      <Label class="description" textWrap="true">{{ wateringDecisionLabel }}</Label>
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
     <div class="vertical">
       <span class="vertical-align-middle txt-font">{{stageNumber}}</span>
-      <Label class="description" textWrap="true">{{ "GROWTH STAGE" }}</Label>
+      <Label class="description" textWrap="true">{{ stageNumberLabel }}</Label>
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
     <div class="vertical">
       <span class="vertical-align-middle txt-font" [class]="soilMoistureColorClass">{{soilMoistureLevel}}</span>
-      <Label class="description" textWrap="true">{{"SOIL MOISTURE"}}</Label>
+      <Label class="description" textWrap="true">{{ soilMoistureLevelLabel }}</Label>
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
     <div class="vertical">
-      <span class="vertical-align-middle txt-font">{{plantingDays}}d</span>
-      <Label class="description" textWrap="true">{{ "SINCE PLANTING" }}</Label>
+      <span class="vertical-align-middle txt-font">{{plantingDays}}</span>
+      <Label class="description" textWrap="true">{{ plantingDaysLabel }}</Label>
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
@@ -47,13 +47,13 @@
         <img class="vertical-align-middle" src="{{weatherIcon}}" width="25" height="25">
         <span class="vertical-align-middle txt-font"> {{temperature}}&deg;C</span>
       </div>
-      <Label class="description" textWrap="true">{{"TEMPERATURE"}}</Label>
+      <Label class="description" textWrap="true">{{ temperatureLabel }}</Label>
     </div>
   </mat-grid-tile>
   <mat-grid-tile>
     <div class="vertical">
       <span class="vertical-align-middle txt-font"> {{rainfallPercentage}}%</span>
-      <Label class="description" textWrap="true">{{"RAINFALL"}}</Label>
+      <Label class="description" textWrap="true">{{ rainfallPercentageLabel }}</Label>
     </div>
   </mat-grid-tile>
 </mat-grid-list>
